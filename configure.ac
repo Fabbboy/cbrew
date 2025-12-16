@@ -6,7 +6,7 @@ AM_SILENT_RULES([yes])
 m4_define([SPACE], [ ])
 m4_define([SUBPROJECTS_M4], [[deps], [cbrew]])
 m4_define([SUBPROJECTS_TXT], 
-  m4_join(m4_defn([SPACE]), m4_unquote(SUBPROJECTS_M4))
+  m4_join(SPACE, m4_unquote(SUBPROJECTS_M4))
 )
 
 AC_SUBST([SUBPROJECTS], 'm4_defn([SUBPROJECTS_TXT])')
