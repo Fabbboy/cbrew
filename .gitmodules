@@ -1,0 +1,8 @@
+[submodule "deps/jemalloc"]
+	path = deps/jemalloc
+	url = https://github.com/jemalloc/jemalloc.git
+	branch = dev
+[submodule "vendor/jemalloc"]
+	path = vendor/jemalloc
+	url = https://github.com/jemalloc/jemalloc.git
+	branch = dev
