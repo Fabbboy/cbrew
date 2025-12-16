@@ -3,8 +3,8 @@ AC_INIT([cbrew], [0.1])
 AM_SILENT_RULES([yes])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 
-define([SUBPROJECTS], [deps, cbrew])
-AC_SUBST([SUBPROJECTS], [m4_normalize(SUBPROJECTS)])
+define([SUBPROJECTS], [[deps], [cbrew]])
+AC_SUBST([SUBPROJECTS],  [m4_normalize(SUBPROJECTS)])
 
 AC_PROG_CC
 AC_PROG_RANLIB
