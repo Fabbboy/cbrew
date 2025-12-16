@@ -18,8 +18,8 @@ AC_PROG_RANLIB
 AC_CONFIG_FILES([Makefile])
 
 m4_foreach([p], m4_defn([SUBPROJECTS_M4]), [
-  AC_SUBST(p[]_INC_PATH,   [${top_srcdir}/]p)
-  AC_SUBST(p[]_BUILD_PATH, [${top_builddir}/]p)
+  AC_SUBST(p[]_INC_PATH,   ['${top_srcdir}/']p)
+  AC_SUBST(p[]_BUILD_PATH, ['$(top_builddir)/']p)
   AC_CONFIG_FILES(p[/Makefile])
 ])
 
