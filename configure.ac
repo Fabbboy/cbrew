@@ -3,10 +3,11 @@ AC_INIT([cbrew], [0.1])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 AM_SILENT_RULES([yes])
 
-SUBPROJECTS="deps cbrew"
-AC_SUBST([SUBPROJECTS])
-
+m4_define([SPACE], [ ])
 m4_define([SUBPROJECTS_M4], [[deps], [cbrew]])
+m4_define([SUBPROJECTS_TXT], m4_join(m4_defn([SPACE]), m4_unquote(SUBPROJECTS_M4))) 
+
+AC_SUBST([SUBPROJECTS], 'm4_defn([SUBPROJECTS_TXT])')
 
 AC_PROG_CC
 AC_PROG_RANLIB
